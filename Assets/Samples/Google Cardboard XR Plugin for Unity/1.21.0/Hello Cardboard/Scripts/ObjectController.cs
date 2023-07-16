@@ -18,12 +18,17 @@
 
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Controls target objects behaviour.
 /// </summary>
 public class ObjectController : MonoBehaviour
 {
+    // Test
+    public GameObject imageUI;
+    public SoundManager soundManager;
+
     /// <summary>
     /// The material to use when this object is inactive (not being gazed at).
     /// </summary>
@@ -88,6 +93,10 @@ public class ObjectController : MonoBehaviour
     {
         Debug.Log("DCMM");
         SetMaterial(true);
+
+        // Test
+        imageUI.SetActive(true);
+        soundManager.PlayImageSound();
     }
 
     /// <summary>
@@ -96,6 +105,9 @@ public class ObjectController : MonoBehaviour
     public void OnPointerExit()
     {
         SetMaterial(false);
+
+        // Test
+        imageUI.SetActive(false);
     }
 
     /// <summary>
@@ -105,6 +117,7 @@ public class ObjectController : MonoBehaviour
     public void OnPointerClick()
     {
         TeleportRandomly();
+
     }
 
     /// <summary>
