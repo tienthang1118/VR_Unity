@@ -31,6 +31,13 @@ public class MapPointer : MonoBehaviour
     }
     public void OnPointerClick()
     {
+        Move();
+    }
+    void Move(){
         player.transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
+    }
+    void OnMouseDown()
+    {
+        Move();
     }
 }
