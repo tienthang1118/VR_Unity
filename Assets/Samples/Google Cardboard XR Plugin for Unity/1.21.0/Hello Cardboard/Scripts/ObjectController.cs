@@ -29,6 +29,7 @@ public class ObjectController : MonoBehaviour
     public GameObject imageUI;
     public SoundManager soundManager;
 
+
     /// <summary>
     /// The material to use when this object is inactive (not being gazed at).
     /// </summary>

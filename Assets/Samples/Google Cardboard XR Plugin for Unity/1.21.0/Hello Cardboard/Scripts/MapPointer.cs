@@ -6,11 +6,12 @@ public class MapPointer : MonoBehaviour
 {
     public float m_spinSpeed;
     public GameObject player;
+    //public VideoManager videoManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -18,22 +19,24 @@ public class MapPointer : MonoBehaviour
     {
         AutoSpin();
     }
-    void AutoSpin(){
+    void AutoSpin()
+    {
         transform.Rotate(0, m_spinSpeed, 0, Space.Self);
     }
     public void OnPointerEnter()
     {
-        transform.localScale += new Vector3(0.03f,0.03f,0.03f);
+        transform.localScale += new Vector3(0.03f, 0.03f, 0.03f);
     }
     public void OnPointerExit()
     {
-        transform.localScale -= new Vector3(0.03f,0.03f,0.03f);
+        transform.localScale -= new Vector3(0.03f, 0.03f, 0.03f);
     }
     public void OnPointerClick()
     {
         Move();
     }
-    void Move(){
+    void Move()
+    {
         player.transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
     }
     void OnMouseDown()

@@ -16,4 +16,10 @@ public class InfoManager : MonoBehaviour
             Show = false;
         }
     }
+    
+    public SoundManager soundManager1;
+
+    public void OnClick(){
+        soundManager1.PlayImageSound();
+    }
 }
