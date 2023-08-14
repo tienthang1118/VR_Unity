@@ -1,34 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Answer : MonoBehaviour
 {
-    public bool isCorrect = false;
     public QuizManager quizManager;
+    private bool isCorrect;
 
-    public void CheckAnswer()
+    public void IsCorrect(bool status)
     {
-        if(isCorrect)
+        isCorrect = status;
+    }
+    // public void OnPointerEnter()
+    // {
+    //     if(gameObject.tag == "Answer" && quizManager.IsTiming())
+    //     {
+    //         if(isCorrect)
+    //         {
+    //             gameObject.GetComponent<Image>().color = Color.green;
+    //             quizManager.Correct();
+    //         }
+    //         else
+    //         {
+    //             gameObject.GetComponent<Image>().color = Color.red;
+    //             quizManager.Wrong();
+    //         }
+    //     }
+    //     else if(gameObject.tag == "Play")
+    //     {
+    //         quizManager.Play();
+    //     }
+    // }
+    public void OnPointerClick()
+    {
+        if(gameObject.tag == "Answer" && quizManager.IsTiming())
         {
-            Debug.Log("Correct");
-            quizManager.Correct();
+            if(isCorrect)
+            {
+                gameObject.GetComponent<Image>().color = Color.green;
+                quizManager.Correct();
+            }
+            else
+            {
+                gameObject.GetComponent<Image>().color = Color.red;
+                quizManager.Wrong();
+            }
         }
-        else
+        else if(gameObject.tag == "Play")
         {
-            Debug.Log("Wrong");
-            quizManager.Wrong();
+            quizManager.Play();
         }
     }
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -20,9 +20,11 @@ public class QuizManager : MonoBehaviour
     private bool isTiming;
     [SerializeField] private TMP_Text TimeText;
     [SerializeField] private float timeLimit;
+
+    private Answer answer;
     private void Start()
     {
-        SetupQuestion();
+        isTiming = false;
     }
     private void Update()
     {
@@ -50,31 +52,25 @@ public class QuizManager : MonoBehaviour
     {
         for(int i = 0; i < AnswerButtons.Length; i++)
         {
+            AnswerButtons[i].GetComponent<Image>().color = Color.white;
             AnswerButtons[i].GetComponentInChildren<TMP_Text>().text = Questions[currentQuestion].answers[i];
+            if(Questions[currentQuestion].correctAns == i+1)
+            {
+                AnswerButtons[i].GetComponent<Answer>().IsCorrect(true);
+            }
+            else
+            {
+                AnswerButtons[i].GetComponent<Answer>().IsCorrect(false);
+            }
         }
     }
-    public void Answer()
-    {
-        isTiming = false;
-        string ans = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.tag;
-        Debug.Log(ans);
-        Debug.Log(Questions[currentQuestion].correctAns);
-        if(ans == Questions[currentQuestion].correctAns)
-        {
-            Debug.Log("vai biu");
-            Correct();
-        }
-        else
-        {
-            Wrong();
-        }
-    }
+ 
     void GenerateQuestion()
     {
-        isTiming = true;
-        timer = 0;
         if(Questions.Count > 0)
         {
+            timer = 0;
+            isTiming = true;
             currentQuestion = Random.Range(0, Questions.Count);
             
             QuestionText.text = Questions[currentQuestion].questionInfo;
@@ -88,13 +84,17 @@ public class QuizManager : MonoBehaviour
     }
     public void Correct()
     {
-        Questions.RemoveAt(currentQuestion);
-        GenerateQuestion();
+        if(isTiming){
+            isTiming = false;
+            StartCoroutine(CorrectAns());
+        }
     }
     public void Wrong()
     {
-        isWin = false;
-        GameOver();
+        if(isTiming){
+            isTiming = false;
+            StartCoroutine(WrongAns());
+        }
     }
     void GameOver()
     {
@@ -109,6 +109,23 @@ public class QuizManager : MonoBehaviour
             GameResultText.text = "YOU LOSE";
         }
     }
+    IEnumerator CorrectAns()
+    {
+        yield return new WaitForSeconds(1);
+        Questions.RemoveAt(currentQuestion);
+        GenerateQuestion();
+    }
+    IEnumerator WrongAns()
+    {
+        yield return new WaitForSeconds(1);
+        Questions.RemoveAt(currentQuestion);
+        isWin = false;
+        GameOver();
+    }
+    public bool IsTiming()
+    {
+        return isTiming;
+    }
 }
 
 [System.Serializable]
@@ -116,5 +133,5 @@ public class Question
 {
     public string questionInfo;         //question text
     public List<string> answers;        //options to select
-    public string correctAns;           //correct option
+    public int correctAns;           //correct option
 }

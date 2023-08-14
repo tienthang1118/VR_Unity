@@ -273,6 +273,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Int_Apt_03_Wall_01 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2318761744862857059, guid: 42f30c85f9e074e4eb17ea01048327d2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3248,9 +3252,11 @@ GameObject:
   - component: {fileID: 286366826}
   - component: {fileID: 286366825}
   - component: {fileID: 286366824}
-  m_Layer: 5
+  - component: {fileID: 286366827}
+  - component: {fileID: 286366828}
+  m_Layer: 6
   m_Name: Button (3)
-  m_TagString: D
+  m_TagString: Answer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3319,19 +3325,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 286366825}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1102856166}
-        m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
-        m_MethodName: Answer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &286366825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3370,6 +3364,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286366822}
   m_CullTransparentMesh: 1
+--- !u!65 &286366827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286366822}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.75, y: 0.5, z: 0.05}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &286366828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286366822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a500eb017f873be4eb3700aebcdc1847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quizManager: {fileID: 1102856166}
 --- !u!1001 &292343511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6690,9 +6718,11 @@ GameObject:
   - component: {fileID: 599670341}
   - component: {fileID: 599670340}
   - component: {fileID: 599670339}
-  m_Layer: 5
+  - component: {fileID: 599670342}
+  - component: {fileID: 599670343}
+  m_Layer: 6
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: Play
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6761,19 +6791,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 599670340}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1102856166}
-        m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &599670340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6812,6 +6830,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599670337}
   m_CullTransparentMesh: 1
+--- !u!114 &599670342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599670337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a500eb017f873be4eb3700aebcdc1847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quizManager: {fileID: 1102856166}
+--- !u!65 &599670343
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599670337}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.75, y: 0.5, z: 0.05}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &606569945
 GameObject:
   m_ObjectHideFlags: 0
@@ -7266,7 +7318,7 @@ GameObject:
   - component: {fileID: 699369119}
   - component: {fileID: 699369121}
   - component: {fileID: 699369120}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11776,28 +11828,28 @@ MonoBehaviour:
     - 2
     - 3
     - 4
-    correctAns: A
+    correctAns: 1
   - questionInfo: Dau la so 2
     answers:
     - 1
     - 2
     - 3
     - 4
-    correctAns: B
+    correctAns: 2
   - questionInfo: Dau la so 3
     answers:
     - 1
     - 2
     - 3
     - 4
-    correctAns: C
+    correctAns: 3
   - questionInfo: Dau la so 4
     answers:
     - 1
     - 2
     - 3
     - 4
-    correctAns: D
+    correctAns: 4
   Questions: []
   AnswerButtons:
   - {fileID: 1944786639}
@@ -11809,7 +11861,7 @@ MonoBehaviour:
   GameOverPanel: {fileID: 1115461197}
   GameResultText: {fileID: 826261781}
   TimeText: {fileID: 2048161265}
-  timeLimit: 10
+  timeLimit: 11
 --- !u!1 &1115461197
 GameObject:
   m_ObjectHideFlags: 0
@@ -14145,9 +14197,11 @@ GameObject:
   - component: {fileID: 1330328211}
   - component: {fileID: 1330328210}
   - component: {fileID: 1330328209}
-  m_Layer: 5
+  - component: {fileID: 1330328212}
+  - component: {fileID: 1330328213}
+  m_Layer: 6
   m_Name: Button (2)
-  m_TagString: C
+  m_TagString: Answer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14216,19 +14270,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1330328210}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1102856166}
-        m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
-        m_MethodName: Answer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1330328210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14267,6 +14309,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330328207}
   m_CullTransparentMesh: 1
+--- !u!65 &1330328212
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330328207}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.75, y: 0.5, z: 0.05}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1330328213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330328207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a500eb017f873be4eb3700aebcdc1847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quizManager: {fileID: 1102856166}
 --- !u!1 &1333004807
 GameObject:
   m_ObjectHideFlags: 0
@@ -15960,9 +16036,11 @@ GameObject:
   - component: {fileID: 1496788536}
   - component: {fileID: 1496788535}
   - component: {fileID: 1496788534}
-  m_Layer: 5
+  - component: {fileID: 1496788537}
+  - component: {fileID: 1496788538}
+  m_Layer: 6
   m_Name: Button (1)
-  m_TagString: B
+  m_TagString: Answer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16015,7 +16093,7 @@ MonoBehaviour:
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
+    m_FadeDuration: 1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -16031,19 +16109,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1496788535}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1102856166}
-        m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
-        m_MethodName: Answer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1496788535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16082,6 +16148,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496788532}
   m_CullTransparentMesh: 1
+--- !u!65 &1496788537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496788532}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.75, y: 0.5, z: 0.05}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1496788538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496788532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a500eb017f873be4eb3700aebcdc1847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quizManager: {fileID: 1102856166}
 --- !u!1001 &1500160444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21612,9 +21712,11 @@ GameObject:
   - component: {fileID: 1944786643}
   - component: {fileID: 1944786642}
   - component: {fileID: 1944786641}
-  m_Layer: 5
+  - component: {fileID: 1944786644}
+  - component: {fileID: 1944786645}
+  m_Layer: 6
   m_Name: Button
-  m_TagString: A
+  m_TagString: Answer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21683,19 +21785,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1944786642}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1102856166}
-        m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
-        m_MethodName: Answer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1944786642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21734,6 +21824,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944786639}
   m_CullTransparentMesh: 1
+--- !u!65 &1944786644
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944786639}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.75, y: 0.5, z: 0.05}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1944786645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944786639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a500eb017f873be4eb3700aebcdc1847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quizManager: {fileID: 1102856166}
 --- !u!1001 &1948780110
 PrefabInstance:
   m_ObjectHideFlags: 0
