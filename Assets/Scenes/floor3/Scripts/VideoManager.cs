@@ -74,6 +74,13 @@ public class VideoManager : MonoBehaviour
         return fraction;
     }
 
+    public void RewindVideo()
+    {
+        videoPlayer.time += 5;
+    }
 
-
+    public void TuaLaiVideo()
+    {
+        videoPlayer.time -= 5;
+    }
 }
