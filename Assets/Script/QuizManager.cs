@@ -17,7 +17,7 @@ public class QuizManager : MonoBehaviour
 
     private bool isWin;
     private float timer;
-    private bool isTiming;
+    [SerializeField] private bool isTiming;
     [SerializeField] private TMP_Text TimeText;
     [SerializeField] private float timeLimit;
 
@@ -34,7 +34,7 @@ public class QuizManager : MonoBehaviour
             if(timer >= timeLimit){
                 Wrong();
             }
-            TimeText.text = ((int)timeLimit-(int)timer - 1).ToString();
+            TimeText.text = ((int)timeLimit-(int)timer).ToString();
         }
     }
     public void Play()
@@ -75,7 +75,6 @@ public class QuizManager : MonoBehaviour
             
             QuestionText.text = Questions[currentQuestion].questionInfo;
             SetAnswers();
-            Debug.Log(currentQuestion);
         }
         else{
             isWin = true;
@@ -95,6 +94,7 @@ public class QuizManager : MonoBehaviour
             isTiming = false;
             StartCoroutine(WrongAns());
         }
+        
     }
     void GameOver()
     {

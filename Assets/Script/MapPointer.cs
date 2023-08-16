@@ -6,9 +6,6 @@ public class MapPointer : MonoBehaviour
 {
     public GameObject player;
     private float spinSpeed = 1;
-    [SerializeField] private float gazeDuration;
-    private float gazeTime = 1.5f;
-    private bool isGaze;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +16,6 @@ public class MapPointer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
         AutoSpin();
     }
     void AutoSpin()
@@ -28,29 +24,19 @@ public class MapPointer : MonoBehaviour
     }
     public void OnPointerEnter()
     {
-        isGaze = true;
         transform.localScale += new Vector3(0.03f, 0.03f, 0.03f);
     }
     public void OnPointerExit()
     {
-        isGaze = false;
-        gazeDuration = 0;
         transform.localScale -= new Vector3(0.03f, 0.03f, 0.03f);
     }
-    public void OnPointerClick()
+    public void IsTriggerPressed()
     {
-
+        Move();
     }
     void Move()
     {
-        if (isGaze)
-        {
-            gazeDuration += Time.deltaTime;
-        }
-        if (gazeDuration >= gazeTime)
-        {
-            player.transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
-        }
+        player.transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
     }
     void OnMouseDown()
     {
