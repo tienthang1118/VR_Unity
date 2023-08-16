@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Answer
   - Play
+  - Floor1
+  - Floor2
+  - Floor3
   layers:
   - Default
   - TransparentFX
