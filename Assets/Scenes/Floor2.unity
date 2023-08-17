@@ -2761,6 +2761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallArt_Apt_07
       objectReference: {fileID: 0}
+    - target: {fileID: 8048782078296159335, guid: 00231fc976224894c8dfec12ebb95de7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -23184,6 +23188,7 @@ Transform:
   - {fileID: 1131277712}
   - {fileID: 133314312}
   - {fileID: 844422621558216263}
+  - {fileID: 1088783367}
   - {fileID: 1670907876}
   - {fileID: 792710198}
   - {fileID: 8584123282091190004}
@@ -23203,7 +23208,6 @@ Transform:
   - {fileID: 791925181}
   - {fileID: 2088830284}
   - {fileID: 133298225}
-  - {fileID: 1088783367}
   - {fileID: 1836565198}
   - {fileID: 1022951012}
   - {fileID: 967823246}
@@ -30288,6 +30292,10 @@ PrefabInstance:
     - target: {fileID: 6683477847236081759, guid: ca794718ea2a2e4438e37724e4f6a6cc, type: 3}
       propertyPath: m_Name
       value: Lamp_Wall_Apt_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683477847236081759, guid: ca794718ea2a2e4438e37724e4f6a6cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
