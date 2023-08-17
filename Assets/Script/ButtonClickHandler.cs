@@ -4,10 +4,12 @@ using UnityEngine.UI;
 public class ButtonClickHandler : MonoBehaviour
 {
     public GameObject painting;
+
     public GameObject PlusButton;
     public GameObject DecreaseButton;
     public GameObject LeftButton;
     public GameObject RightButton;
+
 
     private bool isZoomAndRotateEnabled = false;
 
@@ -18,23 +20,28 @@ public class ButtonClickHandler : MonoBehaviour
     {
         // Kích hoạt chức năng Zoom và Rotate cho tranh
         isZoomAndRotateEnabled = !isZoomAndRotateEnabled;
+
         painting.transform.localScale = Vector3.one;
         painting.transform.localRotation = Quaternion.identity;
+
         // Nếu chức năng được kích hoạt lần đầu tiên hoặc được kích hoạt từ trạng thái tắt
         if (isZoomAndRotateEnabled && !wasZoomAndRotateEnabled)
         {
             // Lưu trạng thái trước đó của chức năng Zoom và Rotate
             wasZoomAndRotateEnabled = true;
+
             PlusButton.SetActive(true);
             DecreaseButton.SetActive(true);
             LeftButton.SetActive(true);
             RightButton.SetActive(true);
+
         }
         // Nếu chức năng được tắt lần đầu tiên hoặc được tắt từ trạng thái kích hoạt
         else if (!isZoomAndRotateEnabled && wasZoomAndRotateEnabled)
         {
             // Tắt chức năng Zoom và Rotate
             wasZoomAndRotateEnabled = false;
+
             PlusButton.SetActive(false);
             DecreaseButton.SetActive(false);
             LeftButton.SetActive(false);

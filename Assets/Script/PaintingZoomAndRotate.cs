@@ -4,6 +4,7 @@ public class PaintingZoomAndRotate : MonoBehaviour
 {
     private float zoomSpeed = 1.0f;
     private float rotateSpeed = 50.0f;
+
     public Renderer paintingRenderer;
 
     public void ZoomMode()
@@ -27,6 +28,7 @@ public class PaintingZoomAndRotate : MonoBehaviour
         float rotateInput = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up, rotateInput * rotateSpeed * Time.deltaTime);
     }
+    
     public void ZoomIn()
     {
         // Xử lý thao tác ZoomIn
@@ -54,4 +56,5 @@ public class PaintingZoomAndRotate : MonoBehaviour
         float rotateInput = 10f;
         transform.Rotate(Vector3.up, rotateInput * rotateSpeed * Time.deltaTime);
     }
+
 }
