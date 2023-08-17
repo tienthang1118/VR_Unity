@@ -6,12 +6,15 @@ public class InfoManager : MonoBehaviour
 {
     public GameObject Panel;
     private bool Show = false;
-    public void ShowAndHideInfo(){
-        if(!Show){
+    public void ShowAndHideInfo()
+    {
+        if (!Show)
+        {
             Panel.SetActive(true);
             Show = true;
         }
-        else {
+        else
+        {
             Panel.SetActive(false);
             Show = false;
         }

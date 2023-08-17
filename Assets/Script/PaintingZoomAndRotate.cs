@@ -28,4 +28,33 @@ public class PaintingZoomAndRotate : MonoBehaviour
         float rotateInput = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up, rotateInput * rotateSpeed * Time.deltaTime);
     }
+    
+    public void ZoomIn()
+    {
+        // Xử lý thao tác ZoomIn
+        float zoomInput = 0.5f;
+        transform.localScale += new Vector3(zoomInput, zoomInput, 0) * zoomSpeed;
+    }
+
+    public void ZoomOut()
+    {
+        // Xử lý thao tác ZoomOut
+        float zoomInput = -0.5f;
+        transform.localScale += new Vector3(zoomInput, zoomInput, 0) * zoomSpeed;
+    }
+
+    public void RotateLeft()
+    {
+        // Xử lý thao tác RotateLeft
+        float rotateInput = -10f;
+        transform.Rotate(Vector3.up, rotateInput * rotateSpeed * Time.deltaTime);
+    }
+
+    public void RotateRight()
+    {
+        // Xử lý thao tác RotateRight
+        float rotateInput = 10f;
+        transform.Rotate(Vector3.up, rotateInput * rotateSpeed * Time.deltaTime);
+    }
+
 }
