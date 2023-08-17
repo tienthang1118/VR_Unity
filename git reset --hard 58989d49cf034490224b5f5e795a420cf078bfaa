@@ -1,0 +1,116 @@
+[33mcommit 58989d49cf034490224b5f5e795a420cf078bfaa[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: EK0720 <tuanbg123459876@gmail.com>
+Date:   Thu Aug 17 15:33:19 2023 +0700
+
+    Complete_Floor_2
+
+[33mcommit 9683f335300d8abfb15b1aab948e03ba404dedf9[m
+Author: EK0720 <tuanbg123459876@gmail.com>
+Date:   Wed Aug 2 17:30:27 2023 +0700
+
+    update floor2 and info
+
+[33mcommit 4ddea9492f424784bc533005db43782f75e72497[m
+Merge: 00baef5 83c032e
+Author: Thang <97146680+tienthang1118@users.noreply.github.com>
+Date:   Wed Aug 2 16:12:37 2023 +0700
+
+    Merge pull request #7 from tienthang1118/thangnt
+    
+    add floor 1 painting
+
+[33mcommit 83c032e06a77fd488ce0a5aa783b19f2416eed35[m[33m ([m[1;31morigin/thangnt[m[33m)[m
+Author: Ali 33 <tienthang1118@gmail.com>
+Date:   Wed Aug 2 16:12:05 2023 +0700
+
+    add floor 1 painting
+
+[33mcommit 00baef53ee47ead5fee2e7d8fee1695f8923a796[m
+Merge: e0b4b50 2a2dbfe
+Author: Thang <97146680+tienthang1118@users.noreply.github.com>
+Date:   Tue Aug 1 21:47:23 2023 +0700
+
+    Merge pull request #6 from tienthang1118/thangnt
+    
+    create floor 1
+
+[33mcommit 2a2dbfe1a579b90aeadec082458c501fe9e946b0[m
+Author: Ali 33 <tienthang1118@gmail.com>
+Date:   Tue Aug 1 21:45:58 2023 +0700
+
+    create floor 1
+
+[33mcommit e0b4b50a4ae3fcd9d64b998c6507e3628b014437[m
+Author: Khuat Manh <khuatdinhmanh2001@gmail.com>
+Date:   Tue Aug 1 20:58:15 2023 +0700
+
+    add prefabs
+
+[33mcommit 00353f7f842e5132053bd1fa46671c8d50bd283c[m
+Merge: 7b27325 586950f
+Author: EK0720 <106641714+EK0720@users.noreply.github.com>
+Date:   Wed Jul 26 16:00:27 2023 +0700
+
+    Merge pull request #5 from tienthang1118/MergeAll
+    
+    MergeAll
+
+[33mcommit 586950ffbd7b971c7fe1b66bf727156d12edc3fa[m[33m ([m[1;31morigin/MergeAll[m[33m)[m
+Author: EK0720 <tuanbg123459876@gmail.com>
+Date:   Wed Jul 26 15:58:57 2023 +0700
+
+    MergeAll
+
+[33mcommit 7b27325b0f5d367420546baa655c6c67146c55bc[m
+Author: Ali 33 <tienthang1118@gmail.com>
+Date:   Wed Jul 26 15:08:07 2023 +0700
+
+    update movement feature for testing
+
+[33mcommit 0849c419df18086a7127b0e99a3caf86bc9880f0[m
+Merge: 6457102 33b18a2
+Author: manh254 <106813828+manh254@users.noreply.github.com>
+Date:   Wed Jul 26 14:49:21 2023 +0700
+
+    Merge pull request #2 from tienthang1118/manhkd
+    
+    add sound, sound image
+
+[33mcommit 33b18a2237d84019e41bafc37bfc1b342986ff59[m[33m ([m[1;31morigin/manhkd[m[33m)[m
+Author: Khuat Manh <khuatdinhmanh2001@gmail.com>
+Date:   Mon Jul 17 00:06:42 2023 +0700
+
+    add sound, sound image
+
+[33mcommit 6457102be54d5b19b22df581be1e63ef3a33a5b2[m
+Merge: abc300d fbd0e69
+Author: Thang <97146680+tienthang1118@users.noreply.github.com>
+Date:   Sun Jul 16 18:36:11 2023 +0700
+
+    Merge pull request #1 from tienthang1118/HideShowInfo
+    
+    Update HideshowInfo
+
+[33mcommit fbd0e69c20354c5d9c8224968cfe1465ec84e2d6[m[33m ([m[1;31morigin/HideShowInfo[m[33m)[m
+Author: EK0720 <tuanbg123459876@gmail.com>
+Date:   Sun Jul 16 18:25:36 2023 +0700
+
+    Update HideshowInfo
+
+[33mcommit abc300de80ef190c3ec0b3e8f07babbac6175ffa[m
+Author: Ali 33 <tienthang1118@gmail.com>
+Date:   Sun Jul 16 11:21:13 2023 +0700
+
+    add movement function
+
+[33mcommit c2e9956d8285cf7f20d4077525aae809b65f7e22[m
+Author: Ali 33 <tienthang1118@gmail.com>
+Date:   Mon Jul 10 16:57:45 2023 +0700
+
+    create project and add google cardboard XR plugin
+
+[33mcommit ca82682be325e5a16f0fbd82bbe19884d07f9e6a[m
+Author: Thang <97146680+tienthang1118@users.noreply.github.com>
+Date:   Mon Jul 10 15:02:00 2023 +0700
+
+    Initial commit
