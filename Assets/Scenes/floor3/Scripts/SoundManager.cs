@@ -16,6 +16,14 @@ public class SoundManager : MonoBehaviour
 
     public void PlayImageSound()
     {
-        audioSource.PlayOneShot(imageSound);
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(imageSound);
+        }
+    }
+
+    public void IsTriggerPressed()
+    {
+        PlayImageSound();
     }
 }
